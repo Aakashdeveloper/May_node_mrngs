@@ -1,0 +1,76 @@
+MEAN 
+> Mongo Express Angular Node
+
+MERN
+> Mongo Express React Node
+Basic JavaScript
+NPM
+Basic NodeJS(in built)(Os,file,http)
+NodeJS(full Stack App) (Node-EJS-Mongo-Express)
+Third Party Api (Weather Api)
+Redis
+Email With Node(Sendgrid)
+MongoDb Basic
+Api with NodeJS(Rest)
+DashBoard(Crud)
+Oauth(with github)
+OO_NodeJs
+Login/Logout(JWT)
+NodeJs with postgres
+GraphQl API
+ChatApp
+Node-Es6(.babel)
+---------------
+Testing
+--------------
+Production Pm2
+Nginx
+Docker
+
+////////////
+NPM
+> Node Package Manger
+> json
+> JavaScript Object Notation
+[
+    {
+        "name":"John",
+        "class":"ui",
+        "isActive":"true"
+    },
+    {
+        "name":"Ammy",
+        "class":"Node"
+    }
+]
+
+
+> Package.json
+# Starting point
+# Description
+# Meta Data
+# Script
+# Packages
+
+////////////Step To Create Package.json////////
+** NodeJs must be installed in system
+> Navigate to the folder using cmd/terminal where you want to create
+> npm init
+> Answer All question
+> Type "yes"
+
+> Local Package
+# Folder Specific
+# max package will go local
+# Normal Dependency
+# Dev Dependency => use only at time of development
+
+////////////////////////////////////
+Step To Install Local Package
+////////////////////////////////
+> Navigate to the folder using cmd/terminal where you want to installed
+> npm install packageName / npm i packageName
+> npm install packageName --save -dev
+
+
+> Global Package
