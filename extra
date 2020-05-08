@@ -3,6 +3,9 @@ MEAN
 
 MERN
 > Mongo Express React Node
+> AWS
+> heroku
+
 Basic JavaScript
 NPM
 Basic NodeJS(in built)(Os,file,http)
@@ -26,6 +29,8 @@ Testing
 Production Pm2
 Nginx
 Docker
+Github
+Heroku
 
 ////////////
 NPM
@@ -74,3 +79,24 @@ Step To Install Local Package
 
 
 > Global Package
+#Run Build Test Prod
+
+////////////////////////////////////
+Step To Install Global Package
+////////////////////////////////
+#Win
+> Run Cmd as admin
+**No Need to go in any folder
+> npm i -g nodemon
+
+#Mac/Linux
+> Open terminal
+> sudo npm i -g nodemon
+
+## It will not be a part of package.json
+## To install we need admin access
+
+## We need this only at time of development
+
+
+Math.floor(Math.random()*(99-1))+1
