@@ -1,0 +1,20 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "this is node fullstack",
+  "main": "index.js",
+  "scripts": {
+   "start":"node api.js",
+   "dev":"nodemon api.js"
+  },
+  "keywords": [
+    "node",
+    "ejs",
+    "express"
+  ],
+  "author": "Nareshit",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

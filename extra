@@ -100,3 +100,21 @@ Step To Install Global Package
 
 
 Math.floor(Math.random()*(99-1))+1
+
+
+///////
+Continoues development
+///////
+npm i -g nodemon
+
+
+Dev   =>  Q/A  ==> Prod
+^
+||
+
+echo 'export PORT='9900'>dev.env
+source ./dev.env
+
+
+//Express Router
+//EJS
