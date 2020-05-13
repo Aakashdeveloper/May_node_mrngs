@@ -4,8 +4,8 @@
   "description": "this is node fullstack",
   "main": "index.js",
   "scripts": {
-   "start":"node api.js",
-   "dev":"nodemon api.js"
+    "start": "node api.js",
+    "dev": "nodemon api.js"
   },
   "keywords": [
     "node",
@@ -15,6 +15,7 @@
   "author": "Nareshit",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.2",
     "express": "^4.17.1"
   }
 }
