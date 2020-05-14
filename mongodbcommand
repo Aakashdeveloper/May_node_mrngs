@@ -1,0 +1,7 @@
+#see all database
+> show dbs
+#to see collections
+> use classdatabase
+> show collections
+
+db.collectionsName.find()

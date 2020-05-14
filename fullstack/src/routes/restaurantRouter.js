@@ -1,5 +1,6 @@
 var express = require('express');
 var restaurantRouter = express.Router();
+
 var restaurants = [
     {
 	"id" : "6360",
@@ -155,15 +156,21 @@ var restaurants = [
 }
 ]
 
-restaurantRouter.route('/')
-  .get(function(req,res){
-    //res.send(restaurants)
-   res.render('restaurant',{title:'Restaurant Page',restaurants:restaurants});
-});
+function router(menu){
+	restaurantRouter.route('/')
+	.get(function(req,res){
+	  //res.send(restaurants)
+	 res.render('restaurant',{title:'Restaurant Page',restaurants:restaurants,
+				  menu:menu});
+  });
+  
+  restaurantRouter.route('/details')
+	.get(function(req,res){
+	  res.send('restaurants details')
+  });
 
-restaurantRouter.route('/details')
-  .get(function(req,res){
-    res.send('restaurants details')
-});
+  return restaurantRouter
+}
 
-module.exports = restaurantRouter;
+
+module.exports = router;
