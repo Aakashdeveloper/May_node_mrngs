@@ -5,3 +5,42 @@
 > show collections
 
 db.collectionsName.find()
+db.collectionsName.find().pretty()
+
+db.zomato.find({city:"Mumbai",}).pretty()
+
+db.zomato.find({aggregate_rating:{$gt:"4"},city:"Delhi"}).sort({aggregate_rating:1}).pretty()
+db.zomato.find({aggregate_rating:{$gt:"4"},city:"Delhi"}).sort({aggregate_rating:-1}).pretty()
+
+
+db.zomato.find({},{locality:1,_id:0,city:1}).pretty()
+
+"_id" : ObjectId("5e99a1e8e0dcfa91d353e7b0") > primary Key
+
+db.zomato.find({},{locality:1,_id:0,city:1}).skip(2).pretty()
+
+///////////////Createe//////
+use mayNode
+show collections
+db.first.insert({"name":"aa","class":"ui",rollno:2})
+db.first.insert({_id:5, "name":"dd","class":"node",rollno:5})
+
+db.test.insertMany([
+    {_id:1, "name":"ankit","class":"node",rollno:1},
+    {_id:2, "name":"john","class":"node",rollno:2},
+    {_id:3, "name":"Ammy","class":"node",rollno:3},
+    {_id:4, "name":"Zoe","class":"node",rollno:4},
+    {_id:5, "name":"Jackson","class":"node",rollno:5}
+
+])
+
+db.test.findOne({rollno:3})
+db.test.findOne()
+
+https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/
+
+
+
+///////////Remove/////
+db.test.remove({})
+db.test.remove({_id:4})
