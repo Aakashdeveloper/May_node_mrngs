@@ -99,8 +99,9 @@
               <h3><%=restaurants[i].name%></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default">97thfloor.com</span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="#" class="text-muted">Read More</a></small>
+                  <h4><span class="label label-default"><%=restaurants[i].city%></span></h4><h4>
+                  <small style="font-family:courier,'new courier';" class="text-muted"><%=restaurants[i].aggregate_rating%> Stars • 
+                  <a href="/restaurants/details/<%=restaurants[i].id%>" class="text-muted">Read More</a></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
