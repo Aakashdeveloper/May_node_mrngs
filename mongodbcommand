@@ -44,3 +44,11 @@ https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/
 ///////////Remove/////
 db.test.remove({})
 db.test.remove({_id:4})
+
+
+////
+db.nodeweb.update({_id:1},{
+    $set:{
+        name:'John'
+    }
+})
