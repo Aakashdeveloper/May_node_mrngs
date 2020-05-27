@@ -12,26 +12,12 @@ let col_name = "nodeat8";
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json())
 
-//Static files
-app.use(express.static(__dirname+'/public'));
-//html
-app.set('views', './src/views');
-//View engine
-app.set('view engine','ejs');
-
 app.get('/health',(req,res) =>{
     res.send("Health Check Pass")
 })
 
-app.get('/',(req,res) => {
-    db.collection(col_name).find({isActive:true}).toArray((err,result)=>{
-        if(err) throw err;
-        res.render('index',{data:result})
-    })
-})
-
 //Read
-app.get('/users',(req,res) => {
+app.get('/',(req,res) => {
     var query = {}
     if(req.query.id){
         query = {_id:req.query.id, isActive:true}
@@ -49,16 +35,9 @@ app.get('/users',(req,res) => {
 //Insert
 app.post('/addUser', (req,res) => {
     console.log(req.body)
-    var data = {
-        _id:req.body._id,
-        name:req.body.name,
-        city:req.body.city,
-        phone:parseInt(req.body.phone),
-        isActive:true
-    }
-    db.collection(col_name).insertOne(data,(err,result) => {
+    db.collection(col_name).insertOne(req.body,(err,result) => {
         if(err) throw err;
-        res.redirect('/')
+        res.send('Data Added')
     })
 })
 
@@ -83,10 +62,6 @@ app.put('/updateUser',(req,res) =>{
     )
 })
 
-app.get('/new',(req,res) => {
-    var id = Math.floor(Math.random()*1000)
-    res.render('admin',{id:id})
-})
 
 //Delete
 app.delete('/deleteUser',(req,res) => {
