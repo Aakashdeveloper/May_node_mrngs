@@ -17,13 +17,14 @@ MongoDb Basic
 Api with NodeJS(Rest)
 DashBoard(Crud)
 Oauth(with github)
-/////////////////////////////////////
 OO_NodeJs
+/////////////////////////////////////
+Node-Es6(.babel)
 Login/Logout(JWT)
 NodeJs with postgres
 GraphQl API
 ChatApp
-Node-Es6(.babel)
+
 ---------------
 Testing
 --------------
@@ -216,3 +217,7 @@ git push -u origin master
 
 Crud
 Create Read Update Delete
+
+////Create node app///
+npm i -g @aakashdeveloper/create-node-app
+generate
