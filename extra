@@ -18,8 +18,10 @@ Api with NodeJS(Rest)
 DashBoard(Crud)
 Oauth(with github)
 OO_NodeJs
-/////////////////////////////////////
 Node-Es6(.babel)
+Github
+/////////////////////////////////////
+
 Login/Logout(JWT)
 NodeJs with postgres
 GraphQl API
@@ -31,7 +33,6 @@ Testing
 Production Pm2
 Nginx
 Docker
-Github
 Heroku
 
 ////////////
@@ -221,3 +222,16 @@ Create Read Update Delete
 ////Create node app///
 npm i -g @aakashdeveloper/create-node-app
 generate
+
+for transpile
+> npm i @babel/core @babel/preset-env @babel/register
+
+
+///////
+Github
+//////
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/testgit.git
+git push -u origin master
