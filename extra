@@ -21,7 +21,6 @@ OO_NodeJs
 Node-Es6(.babel)
 Github
 /////////////////////////////////////
-
 Login/Logout(JWT)
 NodeJs with postgres
 GraphQl API
@@ -230,8 +229,21 @@ for transpile
 ///////
 Github
 //////
+>>>>>FirstTime<<<<<<
 git init
-git add README.md
+git add .
 git commit -m "first commit"
 git remote add origin https://github.com/Aakashdeveloper/testgit.git
 git push -u origin master
+
+>>>>>NextTime<<<<<<
+git add .
+git commit -m "first commit"
+git push
+
+git checkout -b feature/weather
+git push -u origin feature/weather
+
+
+>>>>>>>>>>>>>>>login/Logout<<<<<<<<<<<<<<<<<<<<
+npm i bcryptjs body-parser cors express jsonwebtoken mongodb mongoose
