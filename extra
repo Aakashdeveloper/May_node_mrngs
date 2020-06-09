@@ -22,14 +22,13 @@ Node-Es6(.babel)
 Github
 Login/Logout(JWT)
 NodeJs with postgres
-GraphQl API
-ChatApp
----------------
 Testing
---------------
-Production Pm2
-Nginx
+GraphQl API
+Production 
+Pm2
 Docker
+ChatApp
+Nginx
 Heroku
 
 ////////////
@@ -263,3 +262,54 @@ npm i bcryptjs body-parser cors express jsonwebtoken mongodb mongoose
 (GET) => http://localhost:5000/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
 (response) => {userinfo}
+
+
+/////dummy api///
+npm i -g json-server
+json-server --watch db.json --port 8900
+
+
+///////PM2/////
+npm i -g pm2
+pm2 start app.js
+
+///////Docker///////
+docker build . -t maynode
+docker image ls 
+docker run -p 8089:7899 maynode
+
+server {
+        listen       8082;
+        server_name  localhost;
+
+        location / {
+	    proxy_pass http://127.0.0.1:8900;
+	    proxy_http_version 1.1;
+    	    proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+    }
+
+
+# HTTPS server
+    #
+    #server {
+    #    listen       443 ssl;
+    #    server_name  localhost;
+
+    #    ssl_certificate      cert.pem;
+    #    ssl_certificate_key  cert.key;
+
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}

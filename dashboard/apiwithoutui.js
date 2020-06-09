@@ -16,8 +16,12 @@ app.get('/health',(req,res) =>{
     res.send("Health Check Pass")
 })
 
+app.get('/',(req,res) =>{
+    res.send("Health Check Pass")
+})
+
 //Read
-app.get('/',(req,res) => {
+app.get('/users',(req,res) => {
     var query = {}
     if(req.query.id){
         query = {_id:req.query.id, isActive:true}
